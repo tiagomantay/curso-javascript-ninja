@@ -32,7 +32,9 @@ Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método dev
 alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
 */
-pessoa
+pessoa.fazerAniversario = function () {
+	pessoa.idade += 1;
+	}
 
 /*
 Adicione um método ao objeto `pessoa` chamado `andar`, que terá as seguintes
@@ -44,19 +46,28 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-?
+pessoa.andar = function (passos) {
+	pessoa.caminhouQuantosMetros += passos;
+	pessoa.andando = true;
+	}
 
 /*
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
 */
-?
+pessoa.parar = function () {
+	pessoa.andando = false;
+	}
+
 
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
-?
+pessoa.nomeCompleto = function() {
+	return pessoa.nome + pessoa.sobrenome;
+	}
+
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
