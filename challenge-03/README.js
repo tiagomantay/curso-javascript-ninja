@@ -16,6 +16,7 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `andando` - Boolean - recebe "falso" por padrão
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
+
 var pessoa = {
 	nome: "Tiago",
 	sobrenome: "Mantay",
@@ -73,10 +74,7 @@ pessoa.nomeCompleto = function() {
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
-pessoa.mostrarIdade = function () {
-        return "Ola, eu tenho " +  pessoa.idade + " anos!";
-}
-
+?
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
