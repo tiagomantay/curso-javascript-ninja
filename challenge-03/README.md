@@ -1,6 +1,6 @@
 # Desafio da semana #3
 
-```js
+// ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
 var obj = {}
 
@@ -65,7 +65,7 @@ Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
 */
 pessoa.nomeCompleto = function() {
-	return pessoa.nome + pessoa.sobrenome;
+	return "Olá! Meu nome é " + pessoa.nome + " " + pessoa.sobrenome;
 }
 
 
@@ -74,7 +74,7 @@ Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
 */
 pessoa.mostrarIdade = function () {
-        return "Ola, eu tenho " +  pessoa.idade + " anos!";
+        return "Olá, eu tenho " +  pessoa.idade + " anos!";
 }
 
 
@@ -83,7 +83,7 @@ Crie um método chamado `mostrarPeso`, que retorne a frase:
 - "Eu peso [PESO]Kg."
 */
 pessoa.mostrarPeso = function () {
-        return "Eu peso [" +  pessoa.peso + "]Kg";
+        return "Eu peso " +  pessoa.peso + "Kg";
 }
 
 /*
@@ -91,7 +91,7 @@ Crie um método chamado `mostrarAltura` que retorne a frase:
 - "Minha altura é [ALTURA]m."
 */
 pessoa.mostrarAltura = function () {
-        return "Minha altura é [" +  pessoa.altura + "]m";
+        return "Minha altura é " +  pessoa.altura + "m.";
 }
 
 /*
@@ -99,26 +99,26 @@ Agora vamos brincar um pouco com o objeto criado:
 Qual o nome completo da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.nomeCompleto() //Tiago Mantay
+pessoa.nomeCompleto() //"Olá! Meu nome é Tiago Mantay
 
 /*
 Qual a idade da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */ 
-pessoa.mostrarIdade() //Ola, eu tenho 29 anos!
+pessoa.mostrarIdade() //Olá, eu tenho 29 anos!
 
 /*
 Qual o peso da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.mostrarPeso()  //Eu peso [79]Kg
+pessoa.mostrarPeso()  //Eu peso 79Kg
 
 
 /*
 Qual a altura da pessoa? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.mostrarAltura()
+pessoa.mostrarAltura() //Minha altura é 1.76m."
 
 /*
 Faça a `pessoa` fazer 3 aniversários.
@@ -178,8 +178,33 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+pessoa.apresentacao = function () {
+    var message = "Olá, eu sou " 
+    if ( pessoa.sexo == "masculino") {
+        message += " o ";
+    } else if ( pessoa.sexo == "feminino") {
+        message += " a ";
+    }
+    message += pessoa.nome + " " + pessoa.sobrenome + ", tenho " + pessoa.idade;
+    
+    if ( pessoa.idade == 1){
+        message += " ano, ";
+    } else {
+        message += " anos, ";
+    }
+    
+    message += pessoa.altura + "m, meu peso é " + pessoa.peso + " Kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros;
+    
+    if (pessoa.caminhouQuantosMetros <= 1) {
+        message += " metro!" 
+    } else {
+        message += " metros!" 
+    }
+    
+    return message;
+}
+
 
 // Agora, apresente-se ;)
-?
+pessoa.apresentacao()
 ```
