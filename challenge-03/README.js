@@ -130,7 +130,7 @@ Quantos anos a `pessoa` tem agora? (Use a instrução para responder e
 comentários inline ao lado da instrução para mostrar qual foi a resposta
 retornada)
 */
-pessoa.mostrarIdade() //Ola, eu tenho 32 anos!
+pessoa.mostrarIdade() //Olá, eu tenho 32 anos!
 
 /*
 Agora, faça a `pessoa` caminhar alguns metros, invocando o método `andar` 3x,
@@ -142,7 +142,7 @@ pessoa.andar(5) ; pessoa.andar(3) ; pessoa.andar(1)
 A pessoa ainda está andando? (Use a instrução para responder e comentários
 inline ao lado da instrução para mostrar qual foi a resposta retornada)
 */
-pessoa.andando() //true
+pessoa.andando //true
 
 /*
 Se a pessoa ainda está andando, faça-a parar.
@@ -154,7 +154,7 @@ E agora: a pessoa ainda está andando? (Use uma instrução para responder e
 comentários inline ao lado da instrução para mostrar a resposta retornada)
 */
 pessoa.andando //false
-git 
+
 /*
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
@@ -179,32 +179,27 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function () {
-    var message = "Olá, eu sou " 
-    if ( pessoa.sexo == "masculino") {
-        message += " o ";
-    } else if ( pessoa.sexo == "feminino") {
-        message += " a ";
-    }
-    message += pessoa.nome + " " + pessoa.sobrenome + ", tenho " + pessoa.idade;
+    var sexo = "o";
+    var idadeAnos = "anos";
+    var metrosCaminhados = "metros!";
     
-    if ( pessoa.idade == 1){
-        message += " ano, ";
-    } else {
-        message += " anos, ";
+    if ( pessoa.sexo === "feminino") {
+        sexo = " a ";
     }
     
-    message += pessoa.altura + "m, meu peso é " + pessoa.peso + " Kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros;
-    
-    if (pessoa.caminhouQuantosMetros <= 1) {
-        message += " metro!" 
-    } else {
-        message += " metros!" 
+    if ( pessoa.idade === 1){
+        idadeAnos = "ano";
     }
     
-    return message;
+    if (pessoa.caminhouQuantosMetros === 1) {
+        metrosCaminhados += " metro!" 
+    } 
+    
+    return  "Olá, eu sou " +  sexo + " " + pessoa.nome + " " + pessoa.sobrenome + ", tenho " + pessoa.idade + " " idadeAnos +  ", " +
+    pessoa.altura + "m, meu peso é " + pessoa.peso + "Kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros + " " + metrosCaminhados;
 }
 
 
 // Agora, apresente-se ;)
-pessoa.apresentacao()
+pessoa.apresentacao() /* Olá, eu sou o Tiago Mantay, tenho 32 anos, 1.76m, meu peso é 79Kg e, só hoje, eu já caminhei 9 metros! */
 ```
