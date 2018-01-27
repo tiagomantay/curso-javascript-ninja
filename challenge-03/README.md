@@ -1,6 +1,6 @@
 # Desafio da semana #3
 
-// ```js
+ ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
 var obj = {}
 
