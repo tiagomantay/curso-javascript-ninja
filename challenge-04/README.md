@@ -40,10 +40,10 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 */
 var carro = {
     var marca;
-    modelo;
-    placa
-    ano;
-    cor;
+    var modelo;
+    var placa
+    var ano;
+    var cor;
     quantasPortas;
     assentos;
     quantidadePessoas;
@@ -67,7 +67,8 @@ carro.obterCor = function(){
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterModelo = function() {
+  return carro.modelo;
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
